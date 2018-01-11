@@ -1,3 +1,3 @@
 ## Welcome to My Page, where I post links to my demos of my repos.
 
-[Click me](http://www.google.com){: .btn}
+<button name="button" onclick="http://www.google.com">Click me</button>
