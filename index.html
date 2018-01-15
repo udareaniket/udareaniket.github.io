@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <base href="/new3/" /> -->
-<!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="viewport"
 	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 <title>myPage - Aniket Udare</title>
 <link rel="stylesheet" href="css/social-buttons.css" />
-<link rel="stylesheet" href="css/bootstrap.css" />
 <link rel="stylesheet" href="css/materialize.css" />
+<style>.navbar-fixed-new {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}</style>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 	<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 <link rel="stylesheet"
 	href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	type="text/css">
-	
-
 </head>
 <body style="height: 100%" id="body" ng-app="myApp">
 	<script src="extResources/jquery-3.2.1.min.js"></script>
 	<script src="extResources/angular.js"></script>
 	<script src="extResources/angular-route.js"></script>
 	<script src="extResources/angular-ui-router.js"></script>
-	<script src="extResources/angular-material.min.js"></script>
-	<script src="extResources/angular-animate.min.js"></script>
-	<script src="extResources/bootstrap.bundle.js"></script>
-	<script src="extResources/angular-aria.min.js"></script>
-	<script src="extResources/angular-messages.min.js"></script>
-	
+	<script src="js/materialize.js"></script>
 	<script src="js/application.js"></script>
 	<script>
 	$(document).ready(function() {
 		  
 		  $(window).scroll(function () {
-		      //if you hard code, then use console
-		      //.log to determine when you want the 
-		      //nav bar to stick.  
-		      console.log($(window).scrollTop())
 		    if ($(window).scrollTop() > 189) {
 		      $('#nav_bar').addClass('navbar-fixed-new');
 		    }
@@ -49,13 +43,6 @@
 		  });
 		});
 	</script>
-	<!-- <div class="navbar-fixed">
-		<nav style="background-color: steelblue">
-			<div class="nav-wrapper">
-				<a href="#" class="brand-logo">myPage - Aniket Udare</a>
-			</div>
-		</nav>
-	</div> -->
 	<header class="header indigo z-depth-1">
 		<div class="center ">
 			<img src="img/avatar-me.jpg" alt="" style="height: 145px;"
@@ -92,12 +79,13 @@
                  <a href="https://twitter.com/udareaniket" target="_blank" class="sb min twitter ">Twitter</a>
                         <a href="https://www.facebook.com/aniketudare" target="_blank" class="sb min facebook ">Facebook</a>
                         <a href="http://www.linkedin.com/in/aniketudare" target="_blank" class="sb min linkedin ">Linkedin</a>
+                        <!-- <a href="https://instagram.com/aniketudare" target="_blank" class="sb min insta">insta</a> -->
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-           Aniket Udare © 2018 - All Rights Reserved.
+           Aniket Udare Â© 2018 - All Rights Reserved.
             </div>
           </div>
         </footer>

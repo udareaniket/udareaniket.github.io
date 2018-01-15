@@ -1,5 +1,7 @@
-<script>document.title="About Me - Aniket Udare"</script>
-<div class="section ">
+<script>
+	document.title = "About Me - Aniket Udare";
+</script>
+<div ng-controller="aboutController" class="section ">
 	<h2 class="header indigo-text lighten-1 section-title">
 		<span>About me</span>
 	</h2>
@@ -16,8 +18,8 @@
 	</p>
 	<p class="flow-text">
 		Read my blog on Smart tech >> <a
-			href="http://aniketudare.blogspot.com/" target="_blank"><strong>My Take
-			on Smart Tech</strong></a>
+			href="http://aniketudare.blogspot.com/" target="_blank"><strong>My
+				Take on Smart Tech</strong></a>
 	</p>
 </div>
 <div class="section">
@@ -45,4 +47,15 @@
 	<div class="chip">SQL</div>
 	<div class="chip">Spring</div>
 	<div class="chip">Hibernate</div>
+</div>
+<div class="section flow-text">
+	<h2 class="header indigo-text lighten-1 section-title">
+		<span>Instagram Feed</span>
+	</h2>
+	<div class="carousel">
+	
+		<a ng-repeat="item in imageList" class="carousel-item" style="visibility:visible" ><img
+			src="{{item.thumbnail_src}}"></a> 
+	</div>
+	<div class="center row">For more, follow me on <a href="https://instagram.com/aniketudare" target="_blank"> <img src="img/insta.png" style="width:32px;height:32px"/> </a></div>
 </div>

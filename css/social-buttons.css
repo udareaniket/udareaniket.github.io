@@ -719,6 +719,11 @@ a.sb.linkedin,
 	background-image: url(../images/linkedin.png);
 }
 
+a.sb.insta,
+.sb a.insta {
+	background-image: url(../img/insta.png);
+}
+
 a.sb.pinterest,
 .sb a.pinterest {
 	background-image: url(../images/pinterest.png);
