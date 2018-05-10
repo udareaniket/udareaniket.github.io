@@ -53,9 +53,15 @@
 		<span>Instagram Feed</span>
 	</h2>
 	<div class="carousel">
-	
-		<a ng-repeat="item in imageList" class="carousel-item" style="visibility:visible" ><img
-			src="{{item.thumbnail_src}}"></a> 
+
+		<a ng-repeat="item in imageList" class="carousel-item"
+			style="visibility: visible"><img
+			src="{{item.node.thumbnail_src}}"></a>
 	</div>
-	<div class="center row">For more, follow me on <a href="https://instagram.com/aniketudare" target="_blank"> <img src="img/insta.png" style="width:32px;height:32px"/> </a></div>
+	<div class="center row">
+		For more, follow me on <a href="https://instagram.com/aniketudare"
+			target="_blank"> <img src="img/insta.png"
+			style="width: 32px; height: 32px" />
+		</a>
+	</div>
 </div>

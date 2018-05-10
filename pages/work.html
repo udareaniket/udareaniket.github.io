@@ -1,15 +1,51 @@
-<script>document.title="My work - Aniket Udare"</script>
+<script>
+	document.title = "My work - Aniket Udare";
+</script>
+<script src="extResources/moment.js"></script>
 <div class="box ">
 	<h2 class="header indigo-text lighten-1 section-title">
 		<span>What goes behind the scenes</span>
 	</h2>
-	<p class="flow-text">
-		Welcome to a my digital space, where I post my work that is publicly available on open source platforms.
-	</p>
+	<p class="flow-text">Welcome to a my digital space, where I post my
+		work that is publicly available on open source platforms.</p>
 </div>
-<div class="section featured-media">
+<div ng-controller="workController" class="section featured-media">
 	<div class="row" style="display: inline-block">
-		<div class="col s8 m4">
+		<div ng-repeat="item in gitList" class="col ss8 m4">
+			<div style=" text-align: left;" class="card indigo ">
+				<!-- <div class="card-content white-text">
+					<span class="card-title"> Git Repository <a
+						href="https://github.com/udareaniket/gitUserScore" target="_blank">gitUserScore</a>
+					</span>
+					<p>Github User Score</p>
+				</div>
+				<div class="card-action white-text">
+					<span class="updated-on">Updated on January 10, 2018</span>
+				</div> -->
+				<div style=" text-align: left;" class="card-content center white lighten-5">
+					<span class="card-title activator grey-text text-darken-4">{{item.name}}<i
+						class="material-icons right">more_vert</i></span>
+					<p>
+						<a class="btn indigo"
+							href="{{item.homepage}}"
+							target="_blank">Demo</a>
+					</p>
+					
+					<p>Last Updated: {{item.updated_at}}</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">{{item.name}}<i
+						class="material-icons right">close</i></span>
+					<ul class="collection">
+						<li style="text-align:left" class="collection-item avatar"><img ng-click="go(item)"  targer="_blank" src="https://avatars0.githubusercontent.com/u/15062867?v=4"
+							alt="" class="circle"> <span class="title">User</span>
+							<p><a href="{{item.owner.html_url}}" targer="_blank">{{item.owner.login}}</a></p>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="col s8 m4">
 			<div class="card indigo ">
 				<div class="card-content white-text">
 					<span class="card-title"> Git Repository <a
@@ -40,7 +76,8 @@
 				</div>
 				<div class="card-content center white lighten-5">
 					<a class="btn indigo"
-						href="https://udareaniket.github.io/gitUserSearch/" target="_blank"><div>Demo</div></a>
+						href="https://udareaniket.github.io/gitUserSearch/"
+						target="_blank"><div>Demo</div></a>
 				</div>
 			</div>
 		</div>
@@ -57,14 +94,13 @@
 					<span class="updated-on">Updated on January 2, 2018</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div style="display: grid" class="row center">
-		<div class="card-content center white lighten-5">
-			
-		</div>
-		<a href="https://github.com/udareaniket?tab=repositories" target="_blank"
-			class="btn-large waves-effect waves-light btn teal"> <span>All Repositories</span>
+		<div class="card-content center white lighten-5"></div>
+		<a href="https://github.com/udareaniket?tab=repositories"
+			target="_blank" class="btn-large waves-effect waves-light btn teal">
+			<span>All Repositories</span>
 		</a>
 	</div>
 </div>
