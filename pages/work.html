@@ -11,27 +11,39 @@
 </div>
 <div ng-controller="workController" class="section featured-media">
 	<div class="row" style="display: inline-block">
+	<div style=" text-align: left;" class="card indigo ">
+				<div style=" text-align: left;" class="card-content center white lighten-5">
+					<span class="card-title activator grey-text text-darken-4">IU School of Liberal Arts at IUPUI<i
+						class="material-icons right">more_vert</i></span>
+					<p>
+						<a class="btn indigo"
+							href="https://liberalarts.iupui.edu"
+							target="_blank">Live Url</a>
+					</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">IU School of Liberal Arts at IUPUI<i
+						class="material-icons right">close</i></span>
+					<ul class="collection">
+						<li style="text-align:left" class="collection-item avatar"><img ng-click="go(item)"  targer="_blank" src="https://avatars0.githubusercontent.com/u/15062867?v=4"
+							alt="" class="circle"> <span class="title">User</span>
+							<p><a href="{{item.owner.html_url}}" targer="_blank"></a></p>
+							</li>
+					</ul>
+				</div>
+			</div>
 		<div ng-repeat="item in gitList" class="col ss8 m4">
 			<div style=" text-align: left;" class="card indigo ">
-				<!-- <div class="card-content white-text">
-					<span class="card-title"> Git Repository <a
-						href="https://github.com/udareaniket/gitUserScore" target="_blank">gitUserScore</a>
-					</span>
-					<p>Github User Score</p>
-				</div>
-				<div class="card-action white-text">
-					<span class="updated-on">Updated on January 10, 2018</span>
-				</div> -->
 				<div style=" text-align: left;" class="card-content center white lighten-5">
 					<span class="card-title activator grey-text text-darken-4">{{item.name}}<i
 						class="material-icons right">more_vert</i></span>
 					<p>
 						<a class="btn indigo"
 							href="{{item.homepage}}"
-							target="_blank">Demo</a>
+							target="_blank">Live Url</a>
 					</p>
 					
-					<p>Last Updated: {{item.updated_at}}</p>
+					<p>Last Updated: <script> document.write({{item.updated_at}})</script></p>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">{{item.name}}<i
@@ -45,56 +57,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="col s8 m4">
-			<div class="card indigo ">
-				<div class="card-content white-text">
-					<span class="card-title"> Git Repository <a
-						href="https://github.com/udareaniket/gitUserScore" target="_blank">gitUserScore</a>
-					</span>
-					<p>Github User Score</p>
-				</div>
-				<div class="card-action white-text">
-					<span class="updated-on">Updated on January 10, 2018</span>
-				</div>
-				<div class="card-content center white lighten-5">
-					<a class="btn indigo"
-						href="https://udareaniket.github.io/gitUserScore/" target="_blank"><div>Demo</div></a>
-				</div>
-			</div>
-		</div>
-		<div class="col s8 m4">
-			<div class="card indigo">
-				<div class="card-content white-text">
-					<span class="card-title"> Git Repository <a
-						href="https://github.com/udareaniket/gitUserSearch"
-						target="_blank">gitUserSearch</a>
-					</span>
-					<p>GitHub User Search and followers.</p>
-				</div>
-				<div class="card-action white-text">
-					<span class="updated-on">Updated on January 10, 2018</span>
-				</div>
-				<div class="card-content center white lighten-5">
-					<a class="btn indigo"
-						href="https://udareaniket.github.io/gitUserSearch/"
-						target="_blank"><div>Demo</div></a>
-				</div>
-			</div>
-		</div>
-		<div class="col s8 m4">
-			<div class="card indigo">
-				<div class="card-content white-text">
-					<span class="card-title"> <a
-						href="https://github.com/udareaniket/androidLocalization"
-						target="_blank">androidLocalization</a>
-					</span>
-					<p>Android Localizaion.</p>
-				</div>
-				<div class="card-action white-text">
-					<span class="updated-on">Updated on January 2, 2018</span>
-				</div>
-			</div>
-		</div> -->
 	</div>
 	<div style="display: grid" class="row center">
 		<div class="card-content center white lighten-5"></div>
