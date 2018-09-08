@@ -2,6 +2,9 @@
 
 var app = angular.module('myApp', [ 'ui.router', 'ngRoute' ]);
 var colors = ['red','pink','purple','deep','indigo','blue','light-blue','cyan','teal','green','light-green','lime','yellow','amber','orange','deep-orange','brown','grey','blue-grey'];
+function randColor(){
+	return colors[Math.floor(Math.random() * colors.length)];
+}
 app.config(function($stateProvider) {
 	$stateProvider.state('about', {
 		url : '/about',
@@ -30,7 +33,7 @@ app.run(function($rootScope) {
 });
 app.controller('workController', function($window, $http, $rootScope, $scope,
 		$filter) {
-	$scope.color = colors[Math.floor(Math.random() * colors.length)];
+	//$scope.color = colors[Math.floor(Math.random() * colors.length)];
 	$http.get("https://api.github.com/users/udareaniket/repos").success(
 			function(data, status, headers, config) {
 				data.sort(function(a, b) {
@@ -38,10 +41,23 @@ app.controller('workController', function($window, $http, $rootScope, $scope,
 							- new Date(a.updated_at));
 				});
 				$scope.gitList = data;
+				console.log(data)
+				var today = new Date();
+				
 				angular.forEach($scope.gitList, function(value, key) {
-					var color = colors[Math.floor(Math.random() * colors.length)];
-					value.color=color;
+					value.color=randColor();
+					var updated = new Date(value.updated_at);
+					const utc1 = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+					  const utc2 = Date.UTC(updated.getFullYear(), updated.getMonth(), updated.getDate());
+					  value.lastDays =Math.floor((utc1 - utc2) / (1000 * 60 * 60 * 24));
 				});
+				setTimeout(function() {
+					$('.slider').slider();
+					$('.carousel').carousel({
+						indicators : 'true',
+						padding : 50,
+					});
+				}, 1);
 			});
 	$scope.go = function(item) {
 		$window.location.href = item.owner.html_url;
