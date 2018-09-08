@@ -12,14 +12,12 @@
 <div ng-controller="workController" class="section featured-media">
 	<div class="row" style="display: inline-block">
 	<div  class=" col ss8 m4">
-	<div style=" text-align: left;" class="card indigo">
-				<div style=" text-align: left;" class="card-content center white lighten-5">
+	<div style=" text-align: left;" ng-class="color" class="small card sticky-action">
+				<div style=" text-align: left;" ng-class="color" class="card-content center">
 					<span class="card-title activator grey-text text-darken-4">School of Liberal Arts<i
 						class="material-icons right">more_vert</i></span>
 					<p>
-						<a class="btn indigo"
-							href="https://liberalarts.iupui.edu"
-							target="_blank">Live Url</a>
+						
 					</p>
 				</div>
 				<div class="card-reveal">
@@ -28,21 +26,24 @@
 					<ul class="collection">
 						<li style="text-align:left" class="collection-item avatar"><img ng-click="go(item)"  targer="_blank" src="https://avatars0.githubusercontent.com/u/15062867?v=4"
 							alt="" class="circle"> <span class="title">User</span>
-							<p><a href="{{item.owner.html_url}}" targer="_blank"></a></p>
+							<p></p>
 							</li>
 					</ul>
+				</div>
+				<div class="card-action">
+				<a class="btn indigo"
+							href="https://liberalarts.iupui.edu"
+							target="_blank">Live Url</a>
 				</div>
 			</div>
 			</div>
 		<div ng-repeat="item in gitList" class="col ss8 m4">
-			<div style=" text-align: left;" class="card indigo ">
-				<div style=" text-align: left;" class="card-content center white lighten-5">
+			<div style=" text-transform: uppercase;text-align: left;" ng-class="item.color" class="small card sticky-action">
+				<div style=" text-align: left;" ng-class="item.color" class="card-content center light">
 					<span class="card-title activator grey-text text-darken-4">{{item.name}}<i
 						class="material-icons right">more_vert</i></span>
 					<p>
-						<a class="btn indigo"
-							href="{{item.homepage}}"
-							target="_blank">Live Url</a>
+						
 					</p>
 					
 					<p>Last Updated: <script> document.write({{item.updated_at}})</script></p>
@@ -55,7 +56,13 @@
 							alt="" class="circle"> <span class="title">User</span>
 							<p><a href="{{item.owner.html_url}}" targer="_blank">{{item.owner.login}}</a></p>
 							</li>
+							
 					</ul>
+				</div>
+				<div class="card-action">
+				<a class="btn indigo"
+							href="{{item.homepage}}"
+							target="_blank">Live Url</a>
 				</div>
 			</div>
 		</div>

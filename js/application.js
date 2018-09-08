@@ -1,6 +1,7 @@
 'use strict';
 
 var app = angular.module('myApp', [ 'ui.router', 'ngRoute' ]);
+var colors = ['red','pink','purple','deep','indigo','blue','light-blue','cyan','teal','green','light-green','lime','yellow','amber','orange','deep-orange','brown','grey','blue-grey'];
 app.config(function($stateProvider) {
 	$stateProvider.state('about', {
 		url : '/about',
@@ -29,6 +30,7 @@ app.run(function($rootScope) {
 });
 app.controller('workController', function($window, $http, $rootScope, $scope,
 		$filter) {
+	$scope.color = colors[Math.floor(Math.random() * colors.length)];
 	$http.get("https://api.github.com/users/udareaniket/repos").success(
 			function(data, status, headers, config) {
 				data.sort(function(a, b) {
@@ -36,10 +38,12 @@ app.controller('workController', function($window, $http, $rootScope, $scope,
 							- new Date(a.updated_at));
 				});
 				$scope.gitList = data;
-				console.log($scope.gitList)
+				angular.forEach($scope.gitList, function(value, key) {
+					var color = colors[Math.floor(Math.random() * colors.length)];
+					value.color=color;
+				});
 			});
 	$scope.go = function(item) {
-		console.log(item)
 		$window.location.href = item.owner.html_url;
 	}
 });
