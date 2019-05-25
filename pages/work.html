@@ -73,44 +73,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="carousel">
-
-		<div ng-repeat="item in gitList" class="carousel-item" style="visibility: visible" >
-			<div style=" text-transform: uppercase;text-align: left;" ng-class="item.color" class="small card sticky-action">
-				<div style=" text-align: left;" ng-class="item.color" class="card-content activator center light">
-					<span class="card-title activator grey-text text-darken-4">{{item.name}}</span>
-					<div class="chip" ng-show="item.lastDays>0" ><img src="img/watch.png">updated&nbsp;{{item.lastDays}}&nbsp;day(s) ago</div>
-					<div class="chip" ng-show="item.lastDays==0" ><img src="img/watch.png">updated&nbsp;today</div>
-					<div class="chip"><img src="img/fork.png">forks:&nbsp;{{item.forks_count}}</div>
-					<div class="chip"><img src="img/issue.png">issues:&nbsp;{{item.open_issues_count}}</div>
-					<div class="chip"><img src="img/star.png">stars:&nbsp;{{item.stargazers_count}}</div>
-					<div class="chip"><img src="img/watchers.png">watchers:&nbsp;{{item.watchers_count}}</div>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"><a class="btn indigo"
-							href="{{item.homepage}}"
-							target="_blank">Live Demo</a><i
-						class="material-icons right">close</i></span>
-					
-					
-					<ul class="collection">
-						<li style="text-align:left" class="collection-item avatar"><img ng-click="go(item)"  targer="_blank" src="https://avatars0.githubusercontent.com/u/15062867?v=4"
-							alt="" class="circle">
-							<p><a href="{{item.owner.html_url}}" targer="_blank">{{item.owner.login}}</a></p>
-							</li>
-							
-					</ul>
-				</div>
-				<div class="card-action">
-							<a class="activator" style="cursor:pointer;color:black"
-							target="_blank">Live Demo</a>
-							<a style="color:black"
-							href="{{item.homepage}}"
-							target="_blank">GitHub</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div style="display: grid" class="row center">
 		<div class="card-content center white lighten-5"></div>
 		<a href="https://github.com/udareaniket?tab=repositories"
