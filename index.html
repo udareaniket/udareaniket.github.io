@@ -1,133 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async
-	src="https://www.googletagmanager.com/gtag/js?id=UA-114286060-1"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-114286060-1');
-</script>
-
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
 <meta name="format-detection" content="telephone=no">
 <meta name="msapplication-tap-highlight" content="no">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="img/favicon.ico">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-config" content="img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 <meta name="viewport"
 	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<title>Portfolio - Aniket Udare</title>
-<link rel="stylesheet" href="css/social-buttons.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<style>
-.navbar-fixed-new {
-	top: 0;
-	z-index: 100;
-	position: fixed;
-	width: 100%;
-}
+<title>Portfolio | Aniket</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	crossorigin="anonymous">
 
-@media only screen and (max-width: 600px) {
-	.page-content {
-		padding: 0 0 0 0 !important;
-	}
+<style>
+html {
+	scroll-behavior: smooth;
 }
 </style>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
-<link rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-	type="text/css">
 </head>
-<body style="height: 100%" id="body" ng-app="myApp">
+<body style="height: 100%" id="body">
 	<script
-		src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js"></script>
+		src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/angular@1.7.8/angular.min.js"
+		crossorigin="anonymous"></script>
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+		crossorigin="anonymous"></script>
 	<script
-		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.js"></script>
+		src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"
+		crossorigin="anonymous"></script>
 	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.10/angular-ui-router.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		crossorigin="anonymous"></script>
 	<script src="js/application.js"></script>
-	<script>
-		$(document).ready(function() {
-			$(window).scroll(function() {
-				if ($(window).scrollTop() > 189) {
-					$('#nav_bar').addClass('navbar-fixed-new');
-				}
-				if ($(window).scrollTop() < 190) {
-					$('#nav_bar').removeClass('navbar-fixed-new');
-				}
-			});
-		});
-	</script>
-	<header class="header indigo z-depth-1">
-		<div class="center ">
-			<a class="white-text" ui-sref="about"><img
-				src="img/avatar-me.jpg" alt="" style="height: 145px;"
-				class="center circle responsive-img"></a>
-
-			<h1 style="margin-top: 0;" class="center white-text">
-				<a class="white-text" ui-sref="about">Aniket Udare</a>
-			</h1>
-			<nav id="nav_bar" class="indigo">
-				<div class="nav-wrapper center">
-					<!-- class="hide-on-med-and-down" -->
-					<ul class="center" style="display: inline-block">
-						<li><a ui-sref-active="active" ui-sref="about">About Me</a></li>
-						<li><a ui-sref="timeline">Timeline</a></li>
-						<li><a ui-sref="resume">Resume</a></li>
-						<li><a ui-sref="contact">Contact</a></li>
-						<li><a ui-sref="work">My Work</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<main style="height:100%" class="">
-	<div
-		style="height: 100%; overflow: hidden; margin: 0 10%; padding: 10px 0 40px 60px"
-		ui-view class="view-animate page-content"></div>
-
-	</main>
-	<footer class="page-footer indigo center">
-		<div class="container ">
-			<div class="row">
-				<div class="col l12 m12 s12">
-					<h5 class="white-text">Let's Get Social</h5>
-					<p class="grey-text text-lighten-4">
-						Feel free to <a href="mailto:udareaniket@gmail.com"
-							target="_blank">email me</a>, follow me on Twitter or join me on
-						facebook.
-					</p>
-					<a href="https://twitter.com/udareaniket" target="_blank"
-						class="sb min twitter ">Twitter</a> <a
-						href="https://www.facebook.com/aniketudare" target="_blank"
-						class="sb min facebook ">Facebook</a> <a
-						href="http://www.linkedin.com/in/aniketudare" target="_blank"
-						class="sb min linkedin ">Linkedin</a>
-					<!-- <a href="https://instagram.com/aniketudare" target="_blank" class="sb min insta">insta</a> -->
-				</div>
+	<nav
+		class="text-primary navbar navbar-expand-md fixed-top sticky-top bg-dark navbar-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#"><i class="fas fa-id-badge p-2 "></i>Aniket
+				Udare</a>
+			<button class="navbar-toggler collapsed " type="button"
+				data-toggle="collapse" data-target="#navbarCollapse"
+				aria-controls="navbarCollapse" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse" style="">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#">Home </a></li>
+					<li class="nav-item"><a class="nav-link" href="#work">My
+							Work</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+				</ul>
 			</div>
 		</div>
-		<div class="footer-copyright">
+	</nav>
+	<div id="content"
+		class="position-relative overflow-hidden p-3 p-md-5 m-md-3"
+		ng-controller="controller">
+		<div id="about" class="jumbotron justify-content-center">
 			<div class="container">
-				Aniket Udare ©
-				<script type="text/javascript">
-					var dt = new Date();
-					document.write(dt.getUTCFullYear())
-				</script>
-				- All Rights Reserved.
+				<h1 class="display-4">Hello, world!</h1>
+				<p class="lead">
+					I'm <strong>Aniket Udare</strong>. I enjoy working on usable, clean
+					and practical web sites, hybrid applications and Android native
+					applications. I am a Master's Graduate with Computer Engineering
+					majors at Indiana University - Purdue university Indianapolis a.k.a
+					IUPUI. All my open source development including this <a href="#">portfolio</a>
+					is available at <a href="#work">My work</a> and my <a
+						target="_blank" href="https://www.github.com/udareaniket"><i
+						class="fab fa-github-alt pr-1"></i>github</a>.
+				</p>
 			</div>
 		</div>
-	</footer>
+		<div id="timeline" class="rounded"></div>
+		<div id="work" class="rounded  p-3 p-md-5 bg-dark">
+			<div class="container">
+				<div class="row mb-2">
+					<div class="card-body text-white">
+						<h3 class="card-title justify-content-center">
+							<a class="card-link" href="#work"><i class="fas fa-link pr-2"></i>My
+								Work</a>
+						</h3>
+						<p class="card-text">
+							Here are some of my projects. Most of my work is open source and
+							easily available to on my <a class="" target="_blank"
+								href="https://www.github.com/udareaniket"><i
+								class="fab fa-github-alt pr-1"></i>github</a>. Feel free to fork any
+							project or log issues. To discuss about a project or an idea
+							please do not hesitate to <a class="" href="#contact"><i
+								class="fas fa-file-signature pr-1"></i>contact me</a>.
+						</p>
+					</div>
+				</div>
+				<div class="row mb-2">
+					<div ng-repeat="project in projectList" class="col-md-4 pb-3">
+						<div class="card" style="height: 100%">
+							<div class="card-body">
+								<h5 class="card-title">
+									{{project.title}}<span ng-show="{{!project.freelance}}"
+										class="float-right badge badge-info"><i
+										class="far fa-envelope-open pr-2"></i>opensource</span> <span
+										ng-show="{{project.freelance}}"
+										class="float-right badge badge-info"><i
+										class="fas fa-wallet pr-2"></i>freelance</span>
+
+								</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{project.desc}}</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item"><a target="_blank"
+									class="card-link" ng-href="{{project.gtmetrixURL}}">GTmetrix
+										Score: <span ng-show="{{project.gtmetrixScore=='A'}}"
+										class="badge badge-success">{{project.gtmetrixScore}}</span><span
+										ng-show="{{project.gtmetrixScore=='B' || project.gtmetrixScore=='C'}}"
+										class="badge badge-warning">{{project.gtmetrixScore}}</span><span
+										ng-show="{{project.gtmetrixScore=='D'}}"
+										class="badge badge-danger">{{project.gtmetrixScore}}</span>
+								</a></li>
+								<li class="list-group-item"><a target="_blank"
+									class="card-link" ng-href="{{project.pageSpeedURL}}">PageSpeed
+										Insight Score: <span ng-show="{{project.pageSpeedScore>=90}}"
+										class="badge badge-success">{{project.pageSpeedScore}}</span>
+										<span
+										ng-show="{{project.pageSpeedScore>=80 && project.pageSpeedScore<90}}"
+										class="badge badge-warning">{{project.pageSpeedScore}}</span>
+										<span ng-show="{{project.pageSpeedScore<60}}"
+										class="badge badge-danger">{{project.pageSpeedScore}}</span>
+
+								</a></li>
+							</ul>
+							<div class="card-body">
+								<a target="_blank" ng-href="{{project.demoUrl}}"
+									class="btn btn-primary"><i class="fas fa-glasses pr-2"></i>Demo</a>
+								<a ng-show="project.githubUrl" target="_blank"
+									ng-href="{{project.githubUrl}}" class="btn btn-primary"><i
+									class="fab fa-github-alt pr-2"></i></i>View Source</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact" class="rounded  p-3 p-md-5 bg-light">
+			<div class="container">
+				<div class="row mb-2">
+					<div class="row card-body">
+						<h3 class="card-title justify-content-center">
+							<a class="card-link" href="#contact"><i
+								class="fas fa-link pr-2"></i>Contact</a>
+						</h3>
+						<p class="card-text">I'm currently available for freelance
+							projects or full-time work. If you're interested in working with
+							me, please get in touch using one of the methods below.</p>
+						<div class="col-md-6 col-sm-12">
+							<p class="h4">Contact Me Directly:</p>
+							<ul class="list-group">
+								<li class="list-group-item">Aniket Udare</li>
+								<li class="list-group-item"><a
+									href="https://goo.gl/maps/CxFSxrmPWgMn3VD78" target="_blank">Indianapolis,
+										IN</a></li>
+								<li class="list-group-item"><a href="tel:+1-317-597-3148">(317)
+										597 - 3148</a></li>
+								<li class="list-group-item"><a
+									href="mailto:udareaniket@gmail.com">udareaniket@gmail.com</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<p class="h4">Social Media:</p>
+							<ul class="list-group">
+								<li class="list-group-item"><a
+									href="https://facebook.com/aniketudare" target="_blank"><i
+										class="fab fa-facebook-square fa-3x"></i>&nbsp;</a><a
+									href="https://twitter.com/udareaniket" target="_blank"><i
+										class="fab fa-twitter-square fa-3x"></i>&nbsp;</a><a
+									href="https://twitter.com/udareaniket" target="_blank"><i
+										class="fab fa-instagram fa-3x"></i>&nbsp;</a><a
+									href="https://twitter.com/udareaniket" target="_blank"><i
+										class="fab fa-linkedin fa-3x"></i>&nbsp;</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

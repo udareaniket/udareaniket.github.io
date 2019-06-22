@@ -1,0 +1,55 @@
+[
+	{
+		"title": "Portfolio",
+		"freelance": false,
+		"desc": "A place where I demonstrate all my work and skills.",
+		"demoUrl": "https://udareaniket.github.io",
+		"githubUrl": "https://github.com/udareaniket/udareaniket.github.io",
+		"gtmetrixScore": "C",
+		"gtmetrixURL": "https://gtmetrix.com/reports/udareaniket.github.io/CEONulhV",
+		"pageSpeedScore": 93,
+		"pageSpeedURL": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fudareaniket.github.io%2F&tab=desktop"
+	},
+	{
+		"title": "Motel Booking",
+		"freelance": false,
+		"desc": "Simple yet effective web application to demonstrate motel booking that is pet-friendly and follows strict accessibility guidelines.",
+		"demoUrl": "https://udareaniket.github.io/motel-booking",
+		"githubUrl": "https://github.com/udareaniket/motel-booking",
+		"gtmetrixScore": "A",
+		"gtmetrixURL": "https://gtmetrix.com/reports/udareaniket.github.io/haX6R3P6",
+		"pageSpeedScore": 98,
+		"pageSpeedURL": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fudareaniket.github.io%2Fmotel-booking&tab=desktop"
+	},
+	{
+		"title": "GitHub User Score",
+		"freelance": false,
+		"desc": "Scores GitHub users/organizations based on their projects.",
+		"demoUrl": "https://udareaniket.github.io/gitUserScore",
+		"githubUrl": "https://github.com/udareaniket/gitUserScore",
+		"gtmetrixScore": "D",
+		"gtmetrixURL": "https://gtmetrix.com/reports/udareaniket.github.io/vO2jueDD",
+		"pageSpeedScore": 85,
+		"pageSpeedURL": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fudareaniket.github.io%2FgitUserScore&tab=desktop"
+	},
+	{
+		"title": "GitHub User Search",
+		"freelance": false,
+		"desc": "Search through a GitHub user's followers. This ain't stalking but a quick way to search users.",
+		"demoUrl": "https://udareaniket.github.io/gitUserSearch",
+		"githubUrl": "https://github.com/udareaniket/gitUserSearch",
+		"gtmetrixScore": "D",
+		"gtmetrixURL": "https://gtmetrix.com/reports/udareaniket.github.io/ozTUWPYC",
+		"pageSpeedScore": 85,
+		"pageSpeedURL": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fudareaniket.github.io%2FgitUserSearch&tab=desktop"
+	},
+	{
+		"title": "Tirads Calculator",
+		"freelance": true,
+		"demoUrl": "https://radiogyan.com/tirads-calculator",
+		"gtmetrixScore": "A",
+		"gtmetrixURL": "https://gtmetrix.com/reports/radiogyan.com/JJ1GRnP7",
+		"pageSpeedScore": 94,
+		"pageSpeedURL": "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fradiogyan.com%2Ftirads-calculator&tab=desktop"
+	}
+]
