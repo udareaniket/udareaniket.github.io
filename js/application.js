@@ -2,7 +2,7 @@
 var myApp = angular.module('myApp', []);
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
-    $('#resumeIframe').attr('src', 'drive.google.com/file/d/1TTxDOd1ouJm2mTvv7VvV6AKkvIMXBhXT/preview');
+    $('#resumeIframe').attr('src', 'https://drive.google.com/file/d/1TTxDOd1ouJm2mTvv7VvV6AKkvIMXBhXT/preview');
     $('#resumeIframe').attr('width', $("#quickDiv").width()*0.75);
     $('#resumeIframe').attr('height', $("#quickDiv").width()*0.75);
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
